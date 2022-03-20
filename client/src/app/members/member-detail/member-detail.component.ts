@@ -1,8 +1,8 @@
-import { MembersService } from './../../_services/members.service';
-import { Member } from './../../_modules/member';
 import { Component, OnInit } from '@angular/core';
+import { Member } from 'src/app/_models/member';
+import { MembersService } from 'src/app/_services/members.service';
 import { ActivatedRoute } from '@angular/router';
-import { NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions } from '@kolkov/ngx-gallery';
+import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from '@kolkov/ngx-gallery';
 
 @Component({
   selector: 'app-member-detail',
@@ -29,10 +29,9 @@ export class MemberDetailComponent implements OnInit {
         preview: false
       }
     ]
-
   }
 
-  getImages() : NgxGalleryImage[] {
+  getImages(): NgxGalleryImage[] {
     const imageUrls = [];
     for (const photo of this.member.photos) {
       imageUrls.push({
@@ -45,10 +44,9 @@ export class MemberDetailComponent implements OnInit {
   }
 
   loadMember() {
-    this.memberService.GetMember(this.route.snapshot.paramMap.get('username')).subscribe(member => {
+    this.memberService.getMember(this.route.snapshot.paramMap.get('username')).subscribe(member => {
       this.member = member;
       this.galleryImages = this.getImages();
-
     })
   }
 
