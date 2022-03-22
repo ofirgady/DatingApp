@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 <ng-container >
+=======
+<ng-container>
+>>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52
     <button (click)="get500Error()" class="btn btn-outline-primary mr-3">Test 500 Error</button>
     <button (click)="get400Error()" class="btn btn-outline-primary mr-3">Test 400 Error</button>
     <button (click)="get401Error()" class="btn btn-outline-primary mr-3">Test 401 Error</button>
     <button (click)="get404Error()" class="btn btn-outline-primary mr-3">Test 404 Error</button>
+<<<<<<< HEAD
     <button (click)="get400ValidationError()" class="btn btn-outline-primary mr-3">Test 400 Validation Error</button>
 
 <div class="row mt-5" *ngIf="validationErrors.length > 0">
@@ -14,3 +19,16 @@
 </div>
 
 </ng-container>
+=======
+    <button (click)="get400ValidationError()" class="btn btn-outline-primary mr-3">
+        Test 400 Validation Error</button>
+
+    <div class="row mt-5" *ngIf="validationErrors.length > 0">
+        <ul class="text-danger">
+            <li *ngFor="let error of validationErrors">
+                {{error}}
+            </li>
+        </ul>
+    </div>
+</ng-container>
+>>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52

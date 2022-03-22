@@ -1,3 +1,4 @@
+using System;
 using API.Data;
 using API.Entities;
 using Microsoft.AspNetCore.Authorization;
@@ -19,7 +20,6 @@ namespace API.Controllers
         {
             return "secret text";
         }
-        
         [HttpGet("not-found")]
         public ActionResult<AppUser> GetNotFound()
         {
@@ -45,7 +45,5 @@ namespace API.Controllers
         {
             return BadRequest("This was not a good request");
         }
-
-        
     }
 }

@@ -1,19 +1,30 @@
 <div class="row" *ngIf="member">
     <div class="col-4">
         <div class="card">
+<<<<<<< HEAD
             <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knownAs}}"
                 class="card-img-top img-thumbnail">
 
+=======
+            <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knownAs}}" 
+                class="card-img-top img-thumbnail">
+>>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52
             <div class="card-body">
                 <div>
                     <strong>Location:</strong>
                     <p>{{member.city}}, {{member.country}}</p>
                 </div>
                 <div>
+<<<<<<< HEAD
                     <strong>Age</strong>
                     <p>{{member.age}}</p>
                 </div>
 
+=======
+                    <strong>Age:</strong>
+                    <p>{{member.age}}</p>
+                </div>
+>>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52
                 <div>
                     <strong>Last Active:</strong>
                     <p>{{member.lastActive}}</p>
@@ -23,11 +34,18 @@
                     <p>{{member.created}}</p>
                 </div>
             </div>
+<<<<<<< HEAD
 
             <div class="card-footer">
                 <div class="btn-group d-flex">
                     <button class="btn btn-success">Like</button>
                     <button class="btn btn-primary">Message</button>
+=======
+            <div class="card-footer">
+                <div class="btn-group d-flex">
+                    <button class="btn btn-primary">Like</button>
+                    <button class="btn btn-success">Message</button>
+>>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52
                 </div>
             </div>
         </div>
@@ -35,6 +53,7 @@
 
     <div class="col-8">
         <tabset class="member-tabset">
+<<<<<<< HEAD
             <tab heading='About {{member.knownAs}}:'>
                 <h4>Description</h4>
                 <p>{{member.introduction}}</p>
@@ -56,3 +75,25 @@
         </tabset>
     </div>
 </div>
+=======
+            <tab heading='About {{member.knownAs}}'>
+                <h4>Description</h4>
+                <p>{{member.introduction}}</p>
+                <h4>Looking for</h4>
+                <p>{{member.lookingFor}}</p>
+            </tab>
+            <tab heading='Interests'>
+                <h4>Interests</h4>
+                <p>{{member.interests}}</p>
+            </tab>
+            <tab heading='Photos'>
+                <ngx-gallery [options]="galleryOptions" [images]="galleryImages" 
+                    style="display: inline-block; margin-bottom: 20px;"></ngx-gallery>
+            </tab>
+            <tab heading='Messages'>
+                <p>Messages will go here</p>
+            </tab>
+        </tabset>
+    </div>
+</div>
+>>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52
