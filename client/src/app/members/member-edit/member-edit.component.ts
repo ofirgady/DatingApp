@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import { ToastrService } from 'ngx-toastr';
-import { AccountService } from './../../_services/account.service';
-import { User } from './../../_models/user';
-import { Member } from './../../_modules/member';
-import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
-import { MembersService } from 'src/app/_services/members.service';
-import { take } from 'rxjs/operators';
-=======
 import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import { Member } from 'src/app/_models/member';
 import { User } from 'src/app/_models/user';
@@ -14,7 +5,6 @@ import { AccountService } from 'src/app/_services/account.service';
 import { MembersService } from 'src/app/_services/members.service';
 import { take } from 'rxjs/operators';
 import { ToastrService } from 'ngx-toastr';
->>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -32,15 +22,9 @@ export class MemberEditComponent implements OnInit {
     }
   }
 
-<<<<<<< HEAD
-  constructor(private accountService: AccountService,
-    private memberService: MembersService, private toastr: ToastrService) {
-    this.accountService.currentUser$.pipe(take(1)).subscribe(user => this.user = user);
-=======
   constructor(private accountService: AccountService, private memberService: MembersService, 
     private toastr: ToastrService) { 
       this.accountService.currentUser$.pipe(take(1)).subscribe(user => this.user = user);
->>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52
   }
 
   ngOnInit(): void {
@@ -48,11 +32,7 @@ export class MemberEditComponent implements OnInit {
   }
 
   loadMember() {
-<<<<<<< HEAD
     this.memberService.GetMember(this.user.username).subscribe(member => {
-=======
-    this.memberService.getMember(this.user.username).subscribe(member => {
->>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52
       this.member = member;
     })
   }
@@ -63,8 +43,4 @@ export class MemberEditComponent implements OnInit {
       this.editForm.reset(this.member);
     })
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52
 }

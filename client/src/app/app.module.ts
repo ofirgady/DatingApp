@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import { LoadingInterceptor } from './_interceptors/loading.interceptor';
-import { JwtInterceptor } from './_interceptors/jwt.interceptor';
-import { ErrorInterceptor } from './_interceptors/error.interceptor';
-import { SharedModule } from './_modules/shared.module';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavComponent } from './nav/nav.component';
-import { FormsModule } from '@angular/forms';
-=======
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -22,22 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component';
->>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
-<<<<<<< HEAD
-import { ToastrModule } from 'ngx-toastr';
-import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
-import { NotFoundComponent } from './errors/not-found/not-found.component';
-import { ServerErrorComponent } from './errors/server-error/server-error.component';
-import { MemberCardComponent } from './members/member-card/member-card.component';
-import { MemberEditComponent } from './members/member-edit/member-edit.component';
-import { NgxSpinnerModule } from 'ngx-spinner';
-=======
 import { SharedModule } from './_modules/shared.module';
 import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
 import { ErrorInterceptor } from './_interceptors/error.interceptor';
@@ -51,7 +26,6 @@ import { LoadingInterceptor } from './_interceptors/loading.interceptor';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { TextInputComponent } from './_forms/text-input/text-input.component';
 import { DateInputComponent } from './_forms/date-input/date-input.component';
->>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52
 
 @NgModule({
   declarations: [
@@ -68,12 +42,9 @@ import { DateInputComponent } from './_forms/date-input/date-input.component';
     ServerErrorComponent,
     MemberCardComponent,
     MemberEditComponent,
-<<<<<<< HEAD
-=======
     PhotoEditorComponent,
     TextInputComponent,
     DateInputComponent
->>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52
   ],
   imports: [
     BrowserModule,
@@ -81,13 +52,9 @@ import { DateInputComponent } from './_forms/date-input/date-input.component';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-<<<<<<< HEAD
-    SharedModule
-=======
     ReactiveFormsModule,
     SharedModule,
     NgxSpinnerModule
->>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
@@ -96,8 +63,4 @@ import { DateInputComponent } from './_forms/date-input/date-input.component';
   ],
   bootstrap: [AppComponent]
 })
-<<<<<<< HEAD
-export class AppModule {}
-=======
 export class AppModule { }
->>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52

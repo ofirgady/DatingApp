@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-import { ToastrService } from 'ngx-toastr';
-import { AccountService } from './../_services/account.service';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-=======
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AccountService } from '../_services/account.service';
 import { ToastrService } from 'ngx-toastr';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
->>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52
 
 @Component({
   selector: 'app-register',
@@ -16,29 +10,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-<<<<<<< HEAD
-  @Output() cancleRegister = new EventEmitter();
-  model: any = {};
-
-  constructor(private accountService: AccountService,
-    private toastr: ToastrService) { }
-
-  ngOnInit(): void {
-  }
-
-  register() {
-    this.accountService.register(this.model).subscribe(response =>{
-      console.log(response);
-      this.cancle();
-    }, error => {
-      console.log(error);
-      this.toastr.error(error.error);
-    })
-  }
-
-  cancle() {
-    this.cancleRegister.emit(false);
-=======
   @Output() cancelRegister = new EventEmitter();
   registerForm: FormGroup;
   maxDate: Date;
@@ -87,7 +58,6 @@ export class RegisterComponent implements OnInit {
 
   cancel() {
     this.cancelRegister.emit(false);
->>>>>>> 5c7541c67ee7901fc38c5b87ad10e9d410e34c52
   }
 
 }
